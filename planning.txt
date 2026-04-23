@@ -1,6 +1,6 @@
 api list:
-1. SU registration
-2. DR registration
+1. SU registration {done}
+2. DR registration {done}
 3. TN registration
 4. booking api
 Now

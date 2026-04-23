@@ -21,6 +21,11 @@ const userSchema = new Schema(
       lowercase: true,
       trim: true,
     },
+    contactNumber: {
+      type: String,
+      require: true,
+      trim: true,
+    },
     user_role: {
       type: String,
       lowercase: true,

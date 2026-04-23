@@ -136,17 +136,16 @@ const loginUser = async (req, res) => {
 
 const bcrypt = require("bcrypt");
 
-exports.registerDoctor = async (req, res) => {
+const registerDoctor = async (req, res) => {
   try {
     const {
-      name,
-      address,
+      user_name,
+      user_address,
       contactNumber,
       registrationNumber,
-      email,
-      username,
-      role,
-      password,
+      user_email,
+      user_role,
+      user_password,
       practices, // array of practices
     } = req.body;
 
@@ -154,14 +153,13 @@ exports.registerDoctor = async (req, res) => {
 
     // create doctor
     const doctor = await User.create({
-      name,
-      address,
+      user_name,
+      user_address,
       contactNumber,
       registrationNumber,
-      email,
-      username,
-      role,
-      password,
+      user_email,
+      user_role,
+      user_password,
     });
 
     // create practices
@@ -253,4 +251,10 @@ const getAllUsers = async (req, res) => {
   }
 };
 
-module.exports = { registerUser, loginUser, checkUser, getAllUsers };
+module.exports = {
+  registerUser,
+  loginUser,
+  checkUser,
+  getAllUsers,
+  registerDoctor,
+};
