@@ -1,0 +1,9 @@
+api list:
+1. SU registration
+2. DR registration
+3. TN registration
+4. booking api
+Now
+1. login user
+2. get
+3. update doctor data
