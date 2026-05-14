@@ -21,13 +21,14 @@ app.use(
 app.use(express.static("public"));
 
 const userRouter = require("./routers/user.routes");
-// const adminRouter = require('./routers/admin.routes');
+const practiceRouter = require("./routers/practice.routes");
 // const paymentRouter = require('./routers/payment.routes');
 
 app.get("/", (req, res) => {
   res.send("api is running");
 });
 app.use("/api/users", userRouter);
+app.use("/api/practice", practiceRouter);
 // app.use('/api/admin', adminRouter);
 // app.use('/api/payment', paymentRouter);
 
